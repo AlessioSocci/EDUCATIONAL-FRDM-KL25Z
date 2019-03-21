@@ -2,7 +2,11 @@ Educational BARE-METAL Project
 
 Test some basic funcitonality for NXP KL25 in FRDM board, without libraries.
 
--    GPIO IN / HW Interrupt: toggle blue led in ISR;
+ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set preemptive priority !! ... and also with 
+K64F method to set preemptive! ...but this coding seems work fine!!
+
+
+-    GPIO IN / HW Interrupt: toggle blue led in ISR, set low preemptive priority. 
 
 -    LPTMR: toggle red led in ISR, set preemptive priority of ISR;
     
@@ -19,3 +23,4 @@ Test some basic funcitonality for NXP KL25 in FRDM board, without libraries.
 -    MAIN: adc read, dac out, send AT test command to ESP-01;
 
 -    I2C: set sincronous serial to IR Thermometer Melexis MLX90614. (it does not work yet...)
+
