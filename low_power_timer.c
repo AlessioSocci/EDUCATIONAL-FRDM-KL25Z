@@ -30,5 +30,7 @@ void LPTMR0_init(void)
 
 	LPTMR0->CSR |= (1 << 0) | (1 << 6); // timer enable and timer interrupt enable ( CNR counter value is reset when TCF timer compare flag is set, TCF is set when CNR is equal to CMR)
 
-    NVIC->ISER[0] |= (1 << 28); // interrupt enable in NVIC
+	NVIC->IP[28] |= (1 << 7); // preemptive priority set as 2; min value is 4, max and default is 0
+
+	NVIC->ISER[0] |= (1 << 28); // interrupt enable in NVIC
 }

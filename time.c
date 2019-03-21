@@ -12,42 +12,35 @@ uint32_t ticks = 0;
 void PIT_IRQHandler(void)
 {
 	ticks++;
-	PIT_CH->TFLAG = (1 << 0);
+	GPIOB->PTOR |= (1 << 19);
+	PIT->CHANNEL->TFLG = (1 << 0); // Clear interrupt flag
+}
+
+void delay(uint16_t mseconds) // Delay function, based on pit
+{
+    uint32_t currTicks = ticks;
+
+    while((ticks - currTicks) < mseconds);
 }
 
 void pit_init(void)
 {
-   /* PORTB pin 19 in alt1 mode */
-   PORTB->PCR[19] |= (1 << 8);
+   PORTB->PCR[19] |= (1 << 8); // PORTB pin 19 in alt1 mode, green led
 
-   /* PORTB pin 19 set as output */
-   GPIOB->PDDR |= (1 << 19);
+   GPIOB->PDDR |= (1 << 19); // PORTB pin 19 set as output
 
-   /* PORTB pin 19 default low */
-   GPIOB->PDOR |= (1 << 19);
+   GPIOB->PDOR |= (1 << 19); // PORTB pin 19 default low
 
-   /* enable clock for PIT */
-   SIM->SCGC6 |= (1 << 23);
+   SIM->SCGC6 |= (1 << 23);  // enable clock for PIT
 
-   /* enable PIT module */
-   PIT->MCR |= (0 << 30);
+   PIT->MCR &= ~(1 << 1); // enable PIT module // Attention!! There are many error in reference manual regarding bit field.
 
-   /* set time period */
-   PIT_CH->LDVAL = CLOCK_GetBusClkFreq()/1000;
+   PIT->CHANNEL->LDVAL |= (CLOCK_GetBusClkFreq() / 1000) - 1; // set time period : desired timing * bus clock -1
 
-   /* enable timer interrupt */
-   PIT_CH->TCTRL |= (1 << 1) | (1 << 0);
+   PIT->CHANNEL->TCTRL |= (1 << 1) | (1 << 0); // Timer interrupt enable, Timer enable
 
-   /* interrupt enable in NVIC */
-   NVIC->ISER[0] |= NVIC->ISER[0] | (1 << 22);
+   NVIC->IP[5] |= (1 << 22); // preemptive priority 1, min value is 3, max and default is 0
 
-   /* set priority */
-  // NVIC->IP[5] = NVIC->IP[5] | (1 << 22);
-}
+   NVIC->ISER[0] |= (1 << 22);  // interrupt enable in NVIC
 
-void delay (uint16_t mseconds) // Delay function, based on pit
-{
-    uint32_t currTicks = ticks;
-
-    while ((ticks - currTicks) < mseconds);
 }
