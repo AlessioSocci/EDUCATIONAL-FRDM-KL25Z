@@ -18,7 +18,7 @@ K64F method to set preemptive! ...but this code seems to work well !!
 
 -    PWM: configure TPM for put in external pin a pwm signal;
 
--    UART: set serial communication at 115200 br to ESP8266 -01, Wi-Fi module; (it does not work yet...)
+-    UART: set serial communication at 115200 br to ESP8266 -01, Wi-Fi module; 
     
 -    MAIN: adc read, dac out, send AT test command to ESP-01;
 
