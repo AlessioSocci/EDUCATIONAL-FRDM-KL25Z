@@ -13,6 +13,11 @@
 #include "MKL25Z4.h"
 #include "time.h"
 
-void UART_send(uint8_t dataOut);
-void UART_get(uint8_t* dataIn);
-void UART_init();
+void ESP8266_getIP (char dataOut[]);
+void ESP8266_getCipStatus (char dataOut[]);
+void ESP8266_getListAP (char dataOut[]);
+void ESP8266_quitAP (char dataOut[]);
+void ESP8266_close (char dataOut[]);
+void ESP8266_reset (char dataOut[]);
+void ESP8266_setWifiMode (char dataOut[], uint8_t mode);
+void ESP8266_init();
