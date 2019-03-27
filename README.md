@@ -20,7 +20,7 @@ K64F method to set preemptive! ...but this code seems to work well !!
 
 -    UART: set serial communication at 115200 br to ESP8266 -01, Wi-Fi module; 
     
--    MAIN: adc read, dac out, send AT test command to ESP-01;
+-    MAIN: just once, send string to client from ESP-01 in mode AP, adc read and dac out in task 1, try to read MLX90614 in task 2;
 
 -    I2C: set sincronous serial to IR Thermometer Melexis MLX90614. (it does not work yet...)
 
