@@ -2,8 +2,7 @@ Educational BARE-METAL Project
 
 Test some basic funcitonality for NXP KL25 in FRDM board, without libraries.
 
-ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set preemptive priority !! ... and also with 
-K64F method to set preemptive! ...but this code seems to work well !!
+ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set preemptive priority !! ...this code seems to work well !!
 
 
 -    GPIO IN / HW Interrupt: toggle blue led in ISR, set low preemptive priority. 
