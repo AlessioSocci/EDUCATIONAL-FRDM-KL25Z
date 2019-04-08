@@ -19,7 +19,7 @@ ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set
 
 -    UART: set serial communication at 115200 br to ESP8266 -01, Wi-Fi SoC module; 
 
--    I2C: set sincronous serial to IR Thermometer Melexis MLX90614. (... but it does not work yet...)
+-    I2C: set sincronous serial to IR Thermometer Melexis MLX90614. 
 
 -    MAIN: just once, send string to client from ESP-01 in mode AP, adc read and dac out in task 1, try to read MLX90614 in task 2;
 
