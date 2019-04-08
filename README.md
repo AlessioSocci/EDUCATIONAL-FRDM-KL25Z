@@ -21,7 +21,7 @@ ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set
 
 -    I2C: set sincronous serial to IR Thermometer Melexis MLX90614. 
 
--    MAIN: just once, send string to client from ESP-01 in mode AP, adc read and dac out and MLX90614 T ambient in task 1, read MLX90614 T object in task 2;
+-    MAIN: just once, send string to client from ESP-01 in mode AP, adc read and dac out, MLX90614 T ambient in task 1, read MLX90614 T              object in task 2;
 
 
 
