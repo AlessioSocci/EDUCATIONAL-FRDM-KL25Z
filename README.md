@@ -9,7 +9,7 @@ ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set
 
 -    LPTMR: toggle red led in ISR, set preemptive priority of ISR;
     
--    PIT: pit trigger ISR every 1s, service routine increment a variable for delay function, set high preemptive priority of ISR to allow                                       the usage of delay function into other ISR.
+-    PIT: pit trigger ISR every 1s, service routine increment a variable for delay function, set high preemptive priority of ISR to allow                                               delay function into other ISR.
 
 -    ADC: 16 bit read from external potentiometer, in polling mode;
 
