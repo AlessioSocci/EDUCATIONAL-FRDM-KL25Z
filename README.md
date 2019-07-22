@@ -25,7 +25,12 @@ ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set
 
 -    HW triggered ISR: rotary incremental encoder managing;
 
--    MAIN: just once, send string to client from ESP-01 in mode AP, adc read and dac out, MLX90614 T ambient in task 1, read MLX90614 T              object in task 2, encoder "data-change" acquisition to set dmx frame 4: dimmer of green leds, in task 3, DMX 512 with 129 frame to "PAR LED" 5 dmx channel Lighting device, in task 4. Every task are triggered by counter incremented in PIT interrupt service routine.
+-    MAIN: just once, send string to client from ESP-01 in mode AP, 
+adc read and dac out, MLX90614 T ambient in task 1;
+read MLX90614 T object in task 2; 
+encoder "data-change" acquisition to set dmx frame 3-4-5, respectively to dimm red-green-blue leds, frame index selected by push button, managed by HW interrupt, in task 3; 
+DMX 512 with 129 frame to "PAR LED" 5 dmx channel Lighting device, in task 4. 
+Every task are triggered by counter incremented in PIT interrupt service routine.
 
 
 
