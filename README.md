@@ -1,6 +1,6 @@
 Educational BARE-METAL Project
 
-Test some basic funcitonality for NXP KL25 in FRDM board, without libraries.
+Test some basic functionality for NXP KL25 in FRDM board, without libraries.
 
 ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set preemptive priority !! ...this code seems to work well !!
 
