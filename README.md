@@ -29,7 +29,7 @@ ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set
 _ blink green led in task 0;
 _ adc read and dac out, MLX90614 T ambient in task 1;
 _ read MLX90614 T object in task 2; 
-_ encoder "data-change" acquisition to set dmx frame 3-4-5, respectively to dimm red-green-blue leds, frame index selected by push  button, managed by HW interrupt, refresh WiFi sen array with encoder parameters, in task 3; 
+_ encoder "data-change" acquisition to set dmx frame 3-4-5, respectively to dim red-green-blue leds, frame index selected by push  button, managed by HW interrupt, refresh WiFi sen array with encoder parameters, in task 3; 
 _ DMX 512 with 129 frame to "PAR LED" 5 dmx channel Lighting device, in task 4. 
 _ send DMX channel 3-4-5 value to WiFi, in task 5. (...there are a problems to solve with time duration of this routine...)
 
