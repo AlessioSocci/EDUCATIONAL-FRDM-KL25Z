@@ -1,4 +1,4 @@
-Educational BARE-METAL Project
+ESoft Real Time O.S. with Task Non-Preemptive First Come First Served Scheduling "Educational" Project - NXP ARM Cortex M0+
 
 Test some basic functionality for NXP KL25 in FRDM board, without libraries.
 
