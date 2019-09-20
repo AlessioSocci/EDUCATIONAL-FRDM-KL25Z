@@ -1,4 +1,4 @@
-ESoft Real Time O.S. with Non-Preemptive First Come First Served Task Scheduling, Preemptive Prioritized Interrupt, "Educational" Project - NXP ARM Cortex M0+
+Soft Real Time O.S. with Non-Preemptive First Come First Served Task Scheduling, Preemptive Prioritized Interrupt, "Educational" Project - NXP ARM Cortex M0+
 
 Test some basic functionality for NXP KL25 in FRDM board, without libraries.
 
