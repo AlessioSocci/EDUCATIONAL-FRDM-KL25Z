@@ -25,7 +25,9 @@ ATTENTION!! There are many inconsistencies with KL25Z data sheet when try to set
 
 -    HW triggered ISR: rotary incremental encoder managing;
 
--    MAIN: just once, send string to client from ESP-01 in mode AP, 
+-    SPI: communication with driver SH1106 in 132x64 OLED display.
+
+-    MAIN: just once, send string to client from ESP-01 in mode AP and draw some pixel into OLED display
 _ blink green led in task 0;
 _ adc read and dac out, MLX90614 T ambient in task 1;
 _ read MLX90614 T object in task 2; 
